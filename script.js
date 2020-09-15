@@ -6,7 +6,6 @@ let disco2 = document.createElement("div")
 disco2.setAttribute("id", "disco2")
 let disco3 = document.createElement("div")
 disco3.setAttribute("id", "disco3")
-console.log(disco3)
 let vareta0 = document.getElementById("vareta0")
 vareta0.appendChild(disco0)
 vareta0.appendChild(disco1)
@@ -28,7 +27,6 @@ let checkWin = function () {
         vareta0.appendChild(disco3)
     }
 }
-
 
 vareta0.addEventListener("click", function () {
     if (jogadorStatus === "destino") {
