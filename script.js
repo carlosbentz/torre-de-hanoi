@@ -16,10 +16,10 @@ let vareta2 = document.getElementById("vareta2")
 let jogadorStatus = "origem"
 let discoSelecionado = ""
 let fraseVenceu = document.createElement("div")
-fraseVenceu.innerHTML = "Parabéns, Você Venceu !"
 fraseVenceu.setAttribute("id", "fraseVenceu")
 let checkWin = function () {
     if (vareta2.childElementCount === 4) {
+        fraseVenceu.innerHTML = "Parabéns, Você Venceu !"
         document.body.appendChild(fraseVenceu)
         vareta0.appendChild(disco0)
         vareta0.appendChild(disco1)
@@ -27,8 +27,8 @@ let checkWin = function () {
         vareta0.appendChild(disco3)
     }
 }
-
 vareta0.addEventListener("click", function () {
+    fraseVenceu.innerHTML = ""
     if (jogadorStatus === "destino") {
         if (vareta0.childElementCount === 0) {
             vareta0.appendChild(discoSelecionado)
@@ -56,6 +56,7 @@ vareta0.addEventListener("click", function () {
     }
 })
 vareta1.addEventListener("click", function () {
+    fraseVenceu.innerHTML = ""
     if (jogadorStatus === "destino") {
         if (vareta1.childElementCount === 0) {
             vareta1.appendChild(discoSelecionado)
@@ -83,6 +84,7 @@ vareta1.addEventListener("click", function () {
     }
 })
 vareta2.addEventListener("click", function () {
+    fraseVenceu.innerHTML = ""
     if (jogadorStatus === "destino") {
         if (vareta2.childElementCount === 0) {
             vareta2.appendChild(discoSelecionado)
