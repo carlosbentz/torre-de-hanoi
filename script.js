@@ -22,8 +22,14 @@ fraseVenceu.setAttribute("id", "fraseVenceu")
 let checkWin = function () {
     if (vareta2.childElementCount === 4) {
         document.body.appendChild(fraseVenceu)
+        vareta0.appendChild(disco0)
+        vareta0.appendChild(disco1)
+        vareta0.appendChild(disco2)
+        vareta0.appendChild(disco3)
     }
 }
+
+
 vareta0.addEventListener("click", function () {
     if (jogadorStatus === "destino") {
         if (vareta0.childElementCount === 0) {
